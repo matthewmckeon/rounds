@@ -6,15 +6,9 @@ const cors = require('cors');
 dotenv.config({ path: 'config.env' });
 const roundRouter = require('./routes/roundRoutes');
 
-// Create db variable with data from .env
-const DB = process.env.DATABASE.replace(
-  '<password>',
-  process.env.DATABASE_PASSWORD
-);
-
 // CONNECT DATABASE
 mongoose
-  .connect(DB, {
+  .connect(process.env.DATABASE, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
