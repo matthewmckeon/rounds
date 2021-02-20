@@ -7,10 +7,7 @@ dotenv.config({ path: 'config.env' });
 const roundRouter = require('./routes/roundRoutes');
 
 // Create db variable with data from .env
-const DB = process.env.DATABASE.replace(
-  '<password>',
-  process.env.DATABASE_PASSWORD
-);
+const DB = process.env.DATABASE;
 
 // CONNECT DATABASE
 mongoose
