@@ -28,7 +28,7 @@ export default class EditRound extends Component {
   componentDidMount() {
     // GET req to /rounds/:id endpoint
     axios
-      .get('http://localhost:5000/rounds/' + this.props.match.params.id)
+      .get('/rounds/' + this.props.match.params.id)
       // set form state to match round/:id state
       .then((response) => {
         this.setState({
@@ -103,7 +103,7 @@ export default class EditRound extends Component {
     // PUT req to /update/:id endpoint
     axios
       .put(
-        'http://localhost:5000/rounds/update/' + this.props.match.params.id,
+        '/rounds/update/' + this.props.match.params.id,
         round
       )
       // Check out data

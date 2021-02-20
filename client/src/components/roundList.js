@@ -18,7 +18,7 @@ export default class RoundList extends Component {
   // On mount -> GET request & set state of rounds array
   componentDidMount() {
     axios
-      .get('http://localhost:5000/rounds/')
+      .get('/rounds/')
       .then((response) => {
         this.setState({ rounds: response.data });
       })
@@ -30,7 +30,7 @@ export default class RoundList extends Component {
   // DELETE request @ rounds/:id
   // Update rounds array state by filtering out round['id']
   deleteround(id) {
-    axios.delete('http://localhost:5000/rounds/' + id).then((response) => {
+    axios.delete('/rounds/' + id).then((response) => {
       console.log(response.data);
     });
 

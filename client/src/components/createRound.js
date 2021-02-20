@@ -82,7 +82,7 @@ export default class CreateRound extends Component {
 
     // POST req to /add endpoint
     axios
-      .post('http://localhost:5000/rounds/add', round)
+      .post('/rounds/add', round)
       .then((res) => console.log(res.data));
 
     // redirect to homepage
