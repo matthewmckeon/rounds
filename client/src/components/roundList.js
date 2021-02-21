@@ -95,21 +95,21 @@ export default class RoundList extends Component {
       <div>
         <Container>
           <Row>
-            <Col sm={6}>
+            <Col sm={8}>
               <div>
                 <h1>Recent Rounds</h1>
                 {this.roundList()}
               </div>
             </Col>
-            <Col sm={6}>
-              <div>
+            <Col sm={4} style={{ paddingTop: '5%' }}>
+              <Card>
                 <h1>Leaderboard</h1>
                 <Table>
                   <tbody>
                     <tr>{this.getLeaders()}</tr>
                   </tbody>
                 </Table>
-              </div>
+              </Card>
             </Col>
           </Row>
         </Container>
